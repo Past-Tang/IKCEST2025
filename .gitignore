@@ -1,7 +1,8 @@
-# 模型文件（体积过大，不上传）
-InternVL3_5-2B-Instruct/
-OpenMath-Nemotron-1.5B/
-Qwen2.5-VL-3B-Instruct/
+# 模型权重（体积过大）
+**/InternVL3_5-2B-Instruct/
+**/OpenMath-Nemotron-1.5B/
+**/Qwen2.5-VL-3B-Instruct/
+**/Qwen3-VL-235B*/
 *.safetensors
 *.bin
 *.pt
@@ -10,18 +11,20 @@ Qwen2.5-VL-3B-Instruct/
 # 数据文件
 data/
 *.jsonl
-output.jsonl
-ocr_result.jsonl
-text_result.jsonl
+!requirements.txt
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
-.env
 *.egg-info/
 dist/
 build/
+
+# 训练输出
+output/
+*.log
+generation_log.txt
 
 # IDE
 .vscode/
