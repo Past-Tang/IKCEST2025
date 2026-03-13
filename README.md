@@ -1,5 +1,9 @@
 
 
+<div align="center">
+  <img src="assets/logo.svg" alt="Project Logo" width="100%">
+</div>
+
 **2025 西安交通大学数据竞赛 · 数学题图像理解 · 完整方案**
 
 
@@ -101,7 +105,7 @@ xjtu2025-math/
 │   └── qwen_vl_single_model/       #   单 VL 模型 baseline（60.5~65.1 分）
 │
 └── assets/
-    ├── banner.svg                  #   项目头图
+    ├── logo.svg                    #   项目头图
     ├── benchmark_contest.png       #   竞赛官方数据集对比图
     └── benchmark_selfbuilt.png     #   自建测试集对比图
 ```
