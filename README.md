@@ -4,13 +4,22 @@
   <img src="assets/logo.svg" alt="Project Logo" width="100%">
 </div>
 
-**2025 西安交通大学数据竞赛 · 数学题图像理解 · 完整方案**
+<h1 align="center">2025 西安交通大学数据竞赛 · 数学题图像理解</h1>
+<p align="center">
+  <em>🏆 基于 InternVL3.5 与 OpenMath 的“分而治之”高分完整方案 🏆</em>
+</p>
 
-
+<p align="center">
+  <a href="#赛题概述">赛题概述</a> •
+  <a href="#核心思路分而治之">核心思路</a> •
+  <a href="#快速开始">快速开始</a> •
+  <a href="#关键技术详解">技术详解</a> •
+  <a href="#实验结果">实验结果</a>
+</p>
 
 ---
 
-## 赛题概述
+## 📖 赛题概述
 
 给定一张数学题的照片（手机拍摄），自动识别题目内容并输出正确答案。
 
@@ -26,7 +35,7 @@
 
 ---
 
-## 核心思路：分而治之
+## 💡 核心思路：分而治之
 
 > *把一个大问题拆成三个小问题，让最合适的模型去做最擅长的事。*
 
@@ -65,7 +74,7 @@
 
 ---
 
-## 项目结构
+## 📂 项目结构
 
 ```
 xjtu2025-math/
@@ -114,7 +123,7 @@ xjtu2025-math/
 
 ---
 
-## 快速开始
+## 🚀 快速开始
 
 ### 1. 安装依赖
 
@@ -199,7 +208,7 @@ python run.py stage3 ./data/images ./ocr_result.jsonl ./text_result.jsonl ./outp
 
 ---
 
-## 关键技术详解
+## 🔧 关键技术详解
 
 ### 图表检测
 
@@ -245,7 +254,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ---
 
-## 训练流程
+## 🛠️ 训练流程
 
 整个训练分为 **数据合成 → SFT → GRPO** 三步：
 
@@ -279,7 +288,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ---
 
-## 数据来源
+## 📊 数据来源
 
 
 | 数据集           | 用途                | 链接                                                                  |
@@ -293,23 +302,27 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ---
 
-## 实验结果
+## 📈 实验结果
 
-### 竞赛官方闭合测试集
+### 1️⃣ 竞赛官方闭合测试集
 
-![竞赛官方闭合测试集](assets/benchmark_contest.png)
+<div align="center">
+  <img src="assets/benchmark_contest.png" alt="竞赛官方闭合测试集" width="80%">
+</div>
 
 在竞赛官方闭合数据集上，我们的方案（1.54B + 2.35B 双小模型）以 **67.4%** 的准确率取得 **TOP 6**，相比 Qwen2.5-VL-3B baseline 提升 **23.7%**。数据清洗（Input Image Cleaned）带来了额外 5.8% 的提升（61.6% → 67.4%）。
 
-### 自建测试集 Benchmark
+### 2️⃣ 自建测试集 Benchmark
 
-![自建测试集 Benchmark](assets/benchmark_selfbuilt.png)
+<div align="center">
+  <img src="assets/benchmark_selfbuilt.png" alt="自建测试集 Benchmark" width="80%">
+</div>
 
 在自建测试集上，我们的方案达到 **79.5%** 准确率，**超越 Qwen2.5-VL-32B（72.5%）**——一个参数量是我们 8 倍的模型。相比 3B baseline（45.4%），提升幅度达到 **34.1%**。这证明了「分而治之」策略的巨大优势：用对的模型做对的事，比盲目堆参数量更有效。
 
 ---
 
-## 版本迭代与得分
+## ⏱️ 版本迭代与得分
 
 
 | 版本           | 方案描述                                 | 得分       |
@@ -325,7 +338,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ---
 
-## 环境要求
+## 💻 环境要求
 
 
 | 依赖           | 版本               |
@@ -342,6 +355,6 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ---
 
-## License
+## 📜 License
 
 [MIT License](LICENSE)
