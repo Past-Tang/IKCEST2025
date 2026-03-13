@@ -297,13 +297,13 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ### 竞赛官方闭合测试集
 
-
+![竞赛官方闭合测试集](assets/benchmark_contest.png)
 
 在竞赛官方闭合数据集上，我们的方案（1.54B + 2.35B 双小模型）以 **67.4%** 的准确率取得 **TOP 6**，相比 Qwen2.5-VL-3B baseline 提升 **23.7%**。数据清洗（Input Image Cleaned）带来了额外 5.8% 的提升（61.6% → 67.4%）。
 
 ### 自建测试集 Benchmark
 
-
+![自建测试集 Benchmark](assets/benchmark_selfbuilt.png)
 
 在自建测试集上，我们的方案达到 **79.5%** 准确率，**超越 Qwen2.5-VL-32B（72.5%）**——一个参数量是我们 8 倍的模型。相比 3B baseline（45.4%），提升幅度达到 **34.1%**。这证明了「分而治之」策略的巨大优势：用对的模型做对的事，比盲目堆参数量更有效。
 
