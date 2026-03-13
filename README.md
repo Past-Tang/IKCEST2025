@@ -106,6 +106,8 @@ xjtu2025-math/
     └── benchmark_selfbuilt.png     #   自建测试集对比图
 ```
 
+> 注：截图文件名已统一为 `benchmark_contest.png` 与 `benchmark_selfbuilt.png`。
+
 ---
 
 ## 快速开始
