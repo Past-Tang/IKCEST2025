@@ -1,0 +1,9 @@
+qwen_vl_utils
+torch
+tqdm
+transformers==4.56.2
+vllm==0.10.2
+sympy
+latex2sympy2_extended==1.10.2
+math_verify
+protobuf==3.20.3

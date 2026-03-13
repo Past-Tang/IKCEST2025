@@ -1,0 +1,29 @@
+# 模型文件（体积过大，不上传）
+InternVL3_5-2B-Instruct/
+OpenMath-Nemotron-1.5B/
+Qwen2.5-VL-3B-Instruct/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# 数据文件
+data/
+*.jsonl
+output.jsonl
+ocr_result.jsonl
+text_result.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
